@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './BusinessList.css';
 import Business from '../Business/Business';
 
-export class BusinessList extends React.Component {
+class BusinessList extends React.Component {
   render() {
     return(
       <div className="BusinessList">
@@ -14,4 +14,6 @@ export class BusinessList extends React.Component {
       </div>
     )
   }
-}
+};
+
+export default BusinessList;
