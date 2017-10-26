@@ -21,11 +21,11 @@ class SearchBar extends React.Component {
   render(){
     return(
       <div className="SearchBar">
-        <div classNamr="SearchBar-sort-options">
+        {/* <div classNamr="SearchBar-sort-options">
           <ul>
             {this.renderSortByOptions()}
           </ul>
-        </div>
+        </div> */}
         <div className="SearchBar-fields">
           <input placeholder="Search Businesses" />
           <input placeholder="Where?" />
