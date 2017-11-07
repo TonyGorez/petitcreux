@@ -34,7 +34,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Petit Creux</h1>
-        <SearchBar onClick={this.searchYelp}/>
+        <SearchBar searchYelp={this.searchYelp}/>
         <BusinessList results={businesses}/>
       </div>
     );
