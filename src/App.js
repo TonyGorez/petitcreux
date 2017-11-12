@@ -6,24 +6,9 @@ import BusinessList from './components/BusinessList/BusinessList';
 import SearchBar from './components/SearchBar/SearchBar';
 import Yelp from './util/Yelp'
 
-// let business = {
-//   imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
-//   name: 'MarginOtto Pizzeria',
-//   address: '1010 Paddington Way',
-//   city: 'Flavortown',
-//   state: 'NY',
-//   zipCode: '10101',
-//   category: 'Italian',
-//   rating: 4.5,
-//   reviewCount: 90
-// };
-//
-// let businesses = [
-//   business,
-//   business,
-//   business,
-//   business
-// ];
+let business = {};
+
+let businesses = [];
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +21,7 @@ class App extends Component {
   searchYelp(term, location, sortBy){
     Yelp.search(term, location, sortBy)
     .then(businesses => {
-      setState( {businesses : [businesses]} )
+      this.setState( {businesses : [businesses]} )
     })
   }
 
