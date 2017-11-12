@@ -15,6 +15,7 @@ const Yelp = {
       ).then(response => {
         return response.json();
       }).then(jsonResponse => accessToken = jsonResponse.access_token)
+      .then(console.log('tokenOK'))
     )
   },
 
@@ -22,7 +23,7 @@ const Yelp = {
     return Yelp.getAccessToken()
     .then(
       () => { return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
-        headers : { Authorization : `Bearer ${accessToken}` }
+        headers : { Authorization : `Bearer ${accessToken}`, 'origin' : 'origin' }
       })
     })
     .then(response => {
@@ -48,6 +49,7 @@ const Yelp = {
         }
       }
     )
+    .then(console.log('JsonOK'))
   }
 };
 
