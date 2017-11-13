@@ -29,7 +29,7 @@ class App extends Component {
       <div className="App">
         <h1>Petit Creux</h1>
         <SearchBar searchYelp={this.searchYelp}/>
-        <BusinessList results={businesses}/>
+        <BusinessList results={this.state.businesses}/>
       </div>
     );
   }
