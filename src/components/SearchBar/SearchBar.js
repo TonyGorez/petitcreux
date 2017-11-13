@@ -50,6 +50,8 @@ class SearchBar extends React.Component {
     event.preventDefault()
   }
 
+  // Object.keys renvoi un tableau des clés de SortByOptions
+
   renderSortByOptions(){
     return Object.keys(sortByOptions).map(sortByOption => {
         let sortByOptionValue = sortByOptions[sortByOption];
